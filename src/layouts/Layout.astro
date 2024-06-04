@@ -1,0 +1,49 @@
+---
+import Navbar from "./Navbar.astro";
+import Container from "./container.astro";
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="bg-white dark:bg-gray-900">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-white dark:bg-gray-900 min-h-screen">
+		<Navbar />
+		<Container>
+			<slot />
+		</Container>
+	</body>
+</html>
+<script>
+	var themeToggleBtn = document.getElementById("light-switch");
+
+	if (
+		localStorage.getItem("color-theme") === "dark" ||
+		(!("color-theme" in localStorage) &&
+			window.matchMedia("(prefers-color-scheme: dark)").matches)
+	) {
+		document.documentElement.classList.add("dark");
+		const themeToggleBtn = document.getElementById(
+			"light-switch",
+		) as HTMLInputElement;
+
+		if (themeToggleBtn && themeToggleBtn.checked) {
+			document.documentElement.classList.add("dark");
+			localStorage.setItem("color-theme", "dark");
+		} else {
+			document.documentElement.classList.remove("dark");
+			localStorage.setItem("color-theme", "light");
+		}
+	}
+</script>
