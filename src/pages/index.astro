@@ -1,36 +1,47 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Intro from "@/components/Intro.astro";
+import ImageGallery from "@/components/ImageGalery.astro";
+import PostList from "@/components/PostList.astro";
+import Card from "@/components/Card.astro";
+import CV from "@/components/Cv.astro";
+
+const article = 
+	{ title: "Crafting a design system for a multiplanetary future",
+		body: "Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.",
+		href: "/blog/crafting-a-design-system-for-a-multiplanetary-future"
+	}
+
+
 ---
 
 <Layout title="Welcome to Astro.">
-	<div class="max-w-2xl">
-		<h1
-			class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100"
-		>
-			Welcome.
-		</h1>
-		<p class="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-			Welcome to your new Astro site! This is the home page. You can edit
-			this page in <code>src/pages/index.astro</code>. You can also create
-			new pages in <code>src/pages/</code> and link to them in your navigation.
-		</p>
-		<!-- <div class="mt-6 flex gap-6">
-			<SocialLink href="#" aria-label="Follow on X" icon={XIcon} />
-			<SocialLink
-				href="#"
-				aria-label="Follow on Instagram"
-				icon={InstagramIcon}
-			/>
-			<SocialLink
-				href="#"
-				aria-label="Follow on GitHub"
-				icon={GitHubIcon}
-			/>
-			<SocialLink
-				href="#"
-				aria-label="Follow on LinkedIn"
-				icon={LinkedInIcon}
-			/>
-		</div> -->
-	</div>
+  <Header />
+  <Intro />
+  <ImageGallery />
+  <div class="sm:px-8 mt-24 md:mt-28">
+      <div class="mx-auto w-full max-w-7xl lg:px-8">
+        <div class="relative px-4 sm:px-8 lg:px-12">
+          <div class="mx-auto max-w-2xl lg:max-w-5xl">
+              <div
+                class="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2"
+              >
+                <div>
+                  <PostList>
+                    <Card title={article.title} body={article.body} href={article.href}/>
+                    <Card title={article.title} body={article.body} href={article.href}/>
+                    <Card title={article.title} body={article.body} href={article.href}/>
+
+                  </PostList>
+                </div>
+                <div class="space-y-10 lg:pl-16 xl:pl-24">
+                  <CV />
+                </div>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+  </div>
 </Layout>
