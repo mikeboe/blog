@@ -43,7 +43,7 @@ jobs:
 
       - name: Publish Docker to GHCR.IO
         run: |
-          docker build -t blog -f Dockerfile .
+          docker build -t blog .
           docker tag blog ${{ env.REGISTRY }}/mikeboe/blog:${{ steps.release.outputs.date }}
           docker push ${{ env.REGISTRY }}/mikeboe/blog:${{ steps.release.outputs.date }}
 
