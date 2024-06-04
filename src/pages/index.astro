@@ -1,7 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Header from "@/components/Header.astro";
-import Intro from "@/components/Intro.astro";
+import Header from "@/components/Header.tsx";
+import Intro from "@/components/Intro.tsx";
 import ImageGallery from "@/components/ImageGalery.astro";
 import PostList from "@/components/PostList.astro";
 import Card from "@/components/Card.astro";
@@ -13,12 +13,31 @@ const article =
 		href: "/blog/crafting-a-design-system-for-a-multiplanetary-future"
 	}
 
+  const intro = {
+    headline: 'Software Developer, Founder, Marketer and more.',
+    body: "I'm Michael, a at first self-taught, now university learning developer from Germany. I'm passionate about creating SaaS software, marketing and entrepreneurship. My previous experience lies in Project Management, Marketing and Sales. I've co-founded a company and now I'm switching to a full-time developer role. I'm currently working on my own SaaS project while studying.",
+    social: [
+      {
+        name: 'Twitter',
+        url: 'https://twitter.com/michaelbohrer_',
+        
+      },
+      {
+        name: 'GitHub',
+        url: ''
+      }
+    ]
+  }
 
 ---
 
 <Layout title="Welcome to Astro.">
-  <Header />
-  <Intro />
+  <Header image="https://uploads.rocketcrm.io/org_8nVyCkQ2MHS1iHtt/uploads/1717482630461-thumb-3_-_Michael_Bohrer-003.jpg"/>
+  <Intro 
+      headline={intro.headline}
+      body={intro.body}
+      social={intro.social}
+    />
   <ImageGallery />
   <div class="sm:px-8 mt-24 md:mt-28">
       <div class="mx-auto w-full max-w-7xl lg:px-8">
