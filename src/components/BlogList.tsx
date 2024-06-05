@@ -29,6 +29,7 @@ const BlogList = ({ articles }: BlogListProps) => {
                     key={index}
                     className="group relative flex flex-col items-start"
                   >
+                    <div className="p-2">
                     <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                       <img
                         alt=""
@@ -67,6 +68,7 @@ const BlogList = ({ articles }: BlogListProps) => {
                       </svg>
                       {/* <span className="ml-2">{article.link?.name}</span> */}
                     </p>
+                    </div>
                   </li>
                 ))}
               </ul>
