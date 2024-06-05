@@ -2,53 +2,29 @@
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.tsx";
 import Intro from "@/components/Intro.tsx";
-import ProjectList from "@/components/ProjectList.tsx";
+import BlogList from "@/components/BlogList.tsx";
+import { getCollection } from "astro:content";
+
+// Filter blog entries with 'draft: false' & date before current date
+const publishedBlogEntries = await getCollection("blog", ({ data }:any) => {
+  return !data.draft && data.publishDate < new Date();
+});
+
+// Sort content entries by publication date
+publishedBlogEntries.sort(function (a, b) {
+  return b.data.publishDate.valueOf() - a.data.publishDate.valueOf();
+});
 
 const intro = {
     headline: "Blog",
     body: "Here you will find my thoughts, tutorials, new stuff I'm working on, or old stuff i've worked on. I hope you find something useful here.",
-}
+};
 
-const projects = [
-    {
-        title: "Astro",
-        description: "A new kind of static site builder.",
-        image: 'https://uploads.rocketcrm.io/org_8nVyCkQ2MHS1iHtt/uploads/1717482630461-thumb-3_-_Michael_Bohrer-003.jpg',
-        link: {
-            name: "astro.build",
-            url: "https://www.astro.build",
-        }
-    },
-    {
-        title: "Snowpack",
-        description: "Build web applications with less tooling and 10x faster iteration.",
-        image: 'https://uploads.rocketcrm.io/org_8nVyCkQ2MHS1iHtt/uploads/1717482630461-thumb-3_-_Michael_Bohrer-003.jpg',
-        link: {
-            name: "snowpack.dev",
-            url: "https://www.snowpack.dev",
-        }
-    },
-    {
-        title: "Skypack",
-        description: "The world's first CDN for modern JavaScript.",
-        image: 'https://uploads.rocketcrm.io/org_8nVyCkQ2MHS1iHtt/uploads/1717482630461-thumb-3_-_Michael_Bohrer-003.jpg',
-        link: {name: 'skypack.dev', url: "https://www.skypack.dev"}
-    },
-    {
-        title: "Pika",
-        description: "A new kind of package registry.",
-        image: 'https://uploads.rocketcrm.io/org_8nVyCkQ2MHS1iHtt/uploads/1717482630461-thumb-3_-_Michael_Bohrer-003.jpg',
-        link: {
-            name: "pika.dev",
-            url: "https://www.pika.dev",
-        }
-    },
 
-]
 ---
 
 <Layout title="Welcome to Astro.">
     <Header />
     <Intro headline={intro.headline} body={intro.body} />
-    <ProjectList projects={projects}/>
+    <BlogList articles={publishedBlogEntries} />
 </Layout>

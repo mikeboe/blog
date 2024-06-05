@@ -1,6 +1,5 @@
 ---
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
-import Container from "@/layouts/container.astro";
 
 const navigation = [
   { name: "Projects", href: "/projects" },
@@ -55,7 +54,7 @@ const navigation = [
             <span class="sr-only">Switch to light / dark version</span>
           </label>
         </div>
-        <MenuIcon class="w-4 h-4 text-gray-800" />
+        <MenuIcon class="w-4 h-4 text-gray-800 dark:text-gray-100" />
       </div>
     </div>
     <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
