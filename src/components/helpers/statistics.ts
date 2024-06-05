@@ -2,6 +2,12 @@ import { Octokit, App } from "octokit";
 import fs from "fs";
 import colors from "./colors.json"
 
+interface Colors {
+  [key: string]: {
+    color: string | undefined | null;
+    url: string;
+  };
+}
 
 const getStats = async () => {
   const octokit = new Octokit({
@@ -19,7 +25,7 @@ const getStats = async () => {
       return response.data;
     });
 
-  let languagesData = <{}>[];
+  let languagesData: { name: string, value: number, percentage?: string | undefined, colour?: string | null | undefined}[] = [];
 
   for (let i = 0; i < data.length; i++) {
     console.log(data[i].full_name)
@@ -39,10 +45,10 @@ const getStats = async () => {
       });
   }
 
-  function cumulateLanguages(data) {
+  function cumulateLanguages(data: any) {
     for (let key in data) {
       
-      const index = languagesData.findIndex((item) => item.name === key)
+      const index = languagesData.findIndex((item: any) => item.name === key)
      
 
       if(index !== -1) {
@@ -65,7 +71,7 @@ const getStats = async () => {
       name: item.name,
       value: item.value,
       percentage: ((item.value / totalSize) * 100).toFixed(2),
-      colour: colors[item.name].color
+      colour: (colors as Colors)[item.name].color
     }
   })
 

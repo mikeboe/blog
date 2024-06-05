@@ -3,11 +3,11 @@ type LanguagesProps = {
     languages: {
       name: string;
       value: number;
-      percentage: number;
+      percentage: string;
       colour: string;
     }[];
     totalSize: number;
-    date: Date;
+    date: string;
   };
 };
 
