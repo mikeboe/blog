@@ -3,18 +3,37 @@ import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.tsx";
 import Intro from "@/components/Intro.tsx";
 import ImageGallery from "@/components/ImageGalery.astro";
-import PostList from "@/components/PostList.astro";
-import Card from "@/components/Card.astro";
+import PostList from "@/components/PostList.tsx";
+import Card from "@/components/Card.tsx";
 import Cv from "@/components/Cv.tsx";
+import { date } from "astro/zod";
 
-const article = 
-	{ title: "Crafting a design system for a multiplanetary future",
+const articles = [
+{ title: "Crafting a design system for a multiplanetary future",
 		body: "Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.",
-		href: "/blog/crafting-a-design-system-for-a-multiplanetary-future"
-	}
+		href: "/blog/crafting-a-design-system-for-a-multiplanetary-future",
+    date: "2021-08-01"
+  	},
+{ title: "Crafting a design system for a multiplanetary future",
+		body: "Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.",
+		href: "/blog/crafting-a-design-system-for-a-multiplanetary-future",
+    date: "2021-08-01"
+  	},
+{ title: "Crafting a design system for a multiplanetary future",
+		body: "Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.",
+		href: "/blog/crafting-a-design-system-for-a-multiplanetary-future",
+    date: "2021-08-01"
+  	},
+{ title: "Crafting a design system for a multiplanetary future",
+		body: "Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.",
+		href: "/blog/crafting-a-design-system-for-a-multiplanetary-future",
+    date: "2021-08-01"
+  	},
+]
+
 
   const intro = {
-    headline: 'Software Developer, Founder, Marketer and more.',
+    headline: 'Software Developer, Marketer, Founder, and more.',
     body: "I'm Michael, a at first self-taught, now university learning developer from Germany. I'm passionate about creating SaaS software, marketing and entrepreneurship. My previous experience lies in Project Management, Marketing and Sales. I've co-founded a company and now I'm switching to a full-time developer role. I'm currently working on my own SaaS project while studying.",
     social: [
       {
@@ -47,12 +66,8 @@ const article =
                 class="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2"
               >
                 <div>
-                  <PostList>
-                    <Card title={article.title} body={article.body} href={article.href}/>
-                    <Card title={article.title} body={article.body} href={article.href}/>
-                    <Card title={article.title} body={article.body} href={article.href}/>
-
-                  </PostList>
+                  <PostList articles={articles} />
+                   
                 </div>
                 <div class="space-y-10 lg:pl-16 xl:pl-24">
                   <Cv client:visible/>
