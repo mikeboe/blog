@@ -9,5 +9,6 @@
     "outDir": "./dist",
     "strictNullChecks": true,
     "allowJs": true,
+    "esModuleInterop": true,
 },
 }

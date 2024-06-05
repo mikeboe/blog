@@ -1,0 +1,36 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.tsx";
+import Intro from "@/components/Intro.tsx";
+import Languages from "@/components/Languages.tsx";
+import data from "@/components/helpers/data.json";
+
+  const intro = {
+    headline: 'Software Developer, Marketer, Founder, and more.',
+    body: "I'm Michael, a at first self-taught, now university learning developer from Germany. I'm passionate about creating SaaS software, marketing and entrepreneurship. My previous experience lies in Project Management, Marketing and Sales. I've co-founded a company and now I'm switching to a full-time developer role. I'm currently working on my own SaaS project while studying.",
+    social: [
+      {
+        name: 'Twitter',
+        url: 'https://twitter.com/michaelbohrer_',
+        
+      },
+      {
+        name: 'GitHub',
+        url: ''
+      }
+    ]
+  }
+
+
+---
+
+<Layout title="Welcome to Astro.">
+  <Header image="https://uploads.rocketcrm.io/org_8nVyCkQ2MHS1iHtt/uploads/1717482630461-thumb-3_-_Michael_Bohrer-003.jpg"/>
+  <Intro 
+      headline={intro.headline}
+      body={intro.body}
+      social={intro.social}
+    />
+    <Languages languagesData={data} />
+  
+</Layout>
