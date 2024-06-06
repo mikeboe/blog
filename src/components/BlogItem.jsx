@@ -31,7 +31,7 @@ export default function BlogItem({
             {tags.map((tag) => (
               <span
                 key={tag.id}
-                className="dark:bg-gray-900 dark:text-gray-400 dark:border-gray-400 inline-flex items-center mr-1 gap-x-0.5 rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset dark:ring-gray-500/50 ring-gray-500/10"
+                className="dark:bg-gray-900 dark:text-green-700 dark:border-green-700 inline-flex items-center mr-1 gap-x-0.5 rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset dark:ring-gray-500/50 ring-gray-500/10"
               >
                 {'#' + tag.name}
               </span>

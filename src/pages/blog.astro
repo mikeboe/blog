@@ -6,7 +6,7 @@ import BlogList from "@/components/BlogList.tsx";
 import { getCollection } from "astro:content";
 
 // Filter blog entries with 'draft: false' & date before current date
-const publishedBlogEntries = await getCollection("blog", ({ data }:any) => {
+let publishedBlogEntries = await getCollection("blog", ({ data }:any) => {
   return !data.draft 
 });
 
@@ -26,5 +26,5 @@ const intro = {
 <Layout title="Welcome to Astro.">
     <Header />
     <Intro headline={intro.headline} body={intro.body} />
-    <BlogList articles={publishedBlogEntries} />
+    <BlogList articles={publishedBlogEntries} client:visible />
 </Layout>

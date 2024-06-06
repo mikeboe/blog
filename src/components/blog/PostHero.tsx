@@ -40,12 +40,14 @@ export default function PostHero({ meta }: PostHeroProps) {
           <div className="w-full md:w-auto flex flex-wrap justify-center gap-3">
             <div className="flex flex-wrap">
               {tags.map((tag, index) => (
-                <span
+                 <a href={"/blog/tags/" + tag}>
+                  <span
                   key={index}
                   className="dark:bg-gray-900 dark:text-gray-400 dark:border-gray-400 inline-flex items-center m-1 gap-x-0.5 rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset dark:ring-gray-500/50 ring-gray-500/10"
                 >
                   {"#" + tag}
                 </span>
+                </a>
               ))}
             </div>
           </div>
