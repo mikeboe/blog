@@ -1,36 +1,64 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.tsx";
-import Intro from "@/components/Intro.tsx";
+import IntroSmall from "@/components/IntroSmall.tsx";
 import Languages from "@/components/Languages.tsx";
 import data from "@/components/helpers/data.json";
 
-  const intro = {
-    headline: 'Software Developer, Marketer, Founder, and more.',
-    body: "I'm Michael, a at first self-taught, now university learning developer from Germany. I'm passionate about creating SaaS software, marketing and entrepreneurship. My previous experience lies in Project Management, Marketing and Sales. I've co-founded a company and now I'm switching to a full-time developer role. I'm currently working on my own SaaS project while studying.",
-    social: [
-      {
-        name: 'Twitter',
-        url: 'https://twitter.com/michaelbohrer_',
-        
-      },
-      {
-        name: 'GitHub',
-        url: ''
-      }
-    ]
-  }
-
-
+const intro = {
+  headline: "Hi, I'm Michael 👋",
+  body: "I'm Michael, a at first self-taught, now university learning developer from Germany. I'm passionate about creating SaaS software, marketing and entrepreneurship. My previous experience lies in Project Management, Marketing and Sales. I've co-founded a company and now I'm switching to a full-time developer role. I'm currently working on my own SaaS project while studying.",
+  social: [
+    {
+      name: "Twitter",
+      url: "https://twitter.com/michaelbohrer_",
+    },
+    {
+      name: "GitHub",
+      url: "",
+    },
+  ],
+};
 ---
 
 <Layout title="Welcome to Astro.">
-  <Header image="https://uploads.rocketcrm.io/org_8nVyCkQ2MHS1iHtt/uploads/1717482630461-thumb-3_-_Michael_Bohrer-003.jpg"/>
-  <Intro 
-      headline={intro.headline}
-      body={intro.body}
-      social={intro.social}
-    />
-    <Languages languagesData={data} />
+
   
-</Layout>
+  <Header />
+  
+  <div class="sm:px-8 mt-9">
+    <div class="mx-auto w-full max-w-7xl lg:px-8">
+      <div class="relative px-4 sm:px-8 lg:px-12">
+        <div class="mx-auto max-w-2xl lg:max-w-5xl">
+          <div
+            class="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12"
+          >
+            <div class="lg:pl-20">
+              <div class="max-w-xs px-2.5 lg:max-w-none">
+                <img
+                  alt=""
+                  loading="lazy"
+                  width="800"
+                  height="800"
+                  decoding="async"
+                  data-nimg="1"
+                  class="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+                  sizes="(min-width: 1024px) 32rem, 20rem"
+                  src="https://uploads.rocketcrm.io/org_8nVyCkQ2MHS1iHtt/uploads/1717482630461-thumb-3_-_Michael_Bohrer-003.jpg"
+                  style=" color: transparent;"
+                />
+              </div>
+            </div>
+            <div class="lg:order-first lg:row-span-2">
+              <IntroSmall headline={intro.headline} body={intro.body} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mx-auto max-w-3xl">
+    <Languages languagesData={data} />
+  </div>
+  
+  </Layout>
