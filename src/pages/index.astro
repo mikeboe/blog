@@ -5,29 +5,18 @@ import Intro from "@/components/Intro.tsx";
 import ImageGallery from "@/components/ImageGalery.astro";
 import PostList from "@/components/PostList.tsx";
 import Cv from "@/components/Cv.tsx";
+import { getCollection } from "astro:content";
 
-const articles = [
-{ title: "Crafting a design system for a multiplanetary future",
-		body: "Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.",
-		href: "/blog/crafting-a-design-system-for-a-multiplanetary-future",
-    date: "2021-08-01"
-  	},
-{ title: "Crafting a design system for a multiplanetary future",
-		body: "Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.",
-		href: "/blog/crafting-a-design-system-for-a-multiplanetary-future",
-    date: "2021-08-01"
-  	},
-{ title: "Crafting a design system for a multiplanetary future",
-		body: "Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.",
-		href: "/blog/crafting-a-design-system-for-a-multiplanetary-future",
-    date: "2021-08-01"
-  	},
-{ title: "Crafting a design system for a multiplanetary future",
-		body: "Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.",
-		href: "/blog/crafting-a-design-system-for-a-multiplanetary-future",
-    date: "2021-08-01"
-  	},
-]
+let publishedBlogEntries = await getCollection("blog", ({ data }:any) => {
+  // return !data.draft with 3 entries
+  return !data.draft 
+});
+
+// Sort content entries by publication date
+publishedBlogEntries.sort(function (a, b) {
+  return b.data.publishDate.valueOf() - a.data.publishDate.valueOf();
+});
+
 
 
   const intro = {
@@ -64,7 +53,7 @@ const articles = [
                 class="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2"
               >
                 <div>
-                  <PostList articles={articles} />
+                  <PostList articles={publishedBlogEntries} number={3}/>
                    
                 </div>
                 <div class="space-y-10 lg:pl-16 xl:pl-24">

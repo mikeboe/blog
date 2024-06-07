@@ -27,6 +27,6 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.13",
     "@types/react": "^18.3.3",
-    "tsx": "^4.11.2"
+    "tsx": "^4.13.2"
   }
 }

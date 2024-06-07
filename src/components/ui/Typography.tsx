@@ -1,5 +1,9 @@
-import React from 'react';
-const Headline1 = ({ children }) => {
+type TypographyProps = {
+  children: string | string[] | JSX.Element | JSX.Element[] | number | number[];
+  green?: boolean;
+};
+
+const Headline1 = ({ children }: TypographyProps) => {
   return (
     <h1 className="text-4xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
       {children}
@@ -7,7 +11,7 @@ const Headline1 = ({ children }) => {
   );
 };
 
-const Headline2 = ({ children }) => {
+const Headline2 = ({ children }: TypographyProps) => {
   return (
     <h2 className="mt-2 text-3xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
       {children}
@@ -15,7 +19,7 @@ const Headline2 = ({ children }) => {
   );
 };
 
-const Headline3 = ({ children }) => {
+const Headline3 = ({ children }: TypographyProps) => {
   return (
     <h2 className="mt-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-2xl">
       {children}
@@ -23,7 +27,7 @@ const Headline3 = ({ children }) => {
   );
 };
 
-const Paragraph = ({ children, green }) => {
+const Paragraph = ({ children, green }: TypographyProps) => {
   return (
     <p
       className={`mt-6 text-lg leading-8 ${green ? 'text-green-700' : 'text-gray-600 dark:text-gray-400'}`}
@@ -33,7 +37,7 @@ const Paragraph = ({ children, green }) => {
   );
 };
 
-const ParagraphSmall = ({ children }) => {
+const ParagraphSmall = ({ children }: TypographyProps) => {
   return (
     <p className="mt-6 text-sm leading-8 text-gray-600 dark:text-gray-400">
       {children}
@@ -41,7 +45,7 @@ const ParagraphSmall = ({ children }) => {
   );
 };
 
-const OrdList = ({ children }) => {
+const OrdList = ({ children }: TypographyProps) => {
   return (
     <ol className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
       {children}
@@ -49,7 +53,7 @@ const OrdList = ({ children }) => {
   );
 };
 
-const UnordList = ({ children }) => {
+const UnordList = ({ children }: TypographyProps) => {
   return (
     <ul className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
       {children}
@@ -57,7 +61,7 @@ const UnordList = ({ children }) => {
   );
 };
 
-const Bold = ({ children }) => {
+const Bold = ({ children }: TypographyProps) => {
   return <span className="font-semibold">{children}</span>;
 };
 

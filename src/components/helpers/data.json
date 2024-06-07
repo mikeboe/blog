@@ -2,32 +2,32 @@
   "languages": [
     {
       "name": "JavaScript",
-      "value": 2217272,
-      "percentage": "59.52",
+      "value": 2219620,
+      "percentage": "59.32",
       "colour": "#f1e05a"
     },
     {
       "name": "HTML",
       "value": 720061,
-      "percentage": "19.33",
+      "percentage": "19.24",
       "colour": "#e34c26"
     },
     {
       "name": "MDX",
       "value": 549540,
-      "percentage": "14.75",
+      "percentage": "14.69",
       "colour": "#fcb32c"
     },
     {
       "name": "TypeScript",
-      "value": 119338,
-      "percentage": "3.20",
+      "value": 131366,
+      "percentage": "3.51",
       "colour": "#3178c6"
     },
     {
       "name": "Astro",
-      "value": 48392,
-      "percentage": "1.30",
+      "value": 50590,
+      "percentage": "1.35",
       "colour": "#ff5a03"
     },
     {
@@ -44,14 +44,14 @@
     },
     {
       "name": "Java",
-      "value": 12456,
+      "value": 12429,
       "percentage": "0.33",
       "colour": "#b07219"
     },
     {
       "name": "Dockerfile",
       "value": 9897,
-      "percentage": "0.27",
+      "percentage": "0.26",
       "colour": "#384d54"
     },
     {
@@ -61,6 +61,6 @@
       "colour": "#89e051"
     }
   ],
-  "totalSize": 3725139,
-  "date": "2024-06-05T20:16:20.104Z"
+  "totalSize": 3741686,
+  "date": "2024-06-07T11:58:21.407Z"
 }
