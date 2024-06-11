@@ -36,7 +36,7 @@ const ProjectList = ({ projects }: ProjectListProps) => {
                           height="32"
                           decoding="async"
                           data-nimg="1"
-                          className="h-12 w-12 rounded-full"
+                          className="h-12 w-12 rounded-full object-contain"
                           src={project.image}
                           style={{ color: "transparent" }}
                         />

@@ -1,6 +1,9 @@
 import { Octokit, App } from "octokit";
 import fs from "fs";
 import colors from "./colors.json"
+import dotenv from "dotenv";
+
+dotenv.config();
 
 interface Colors {
   [key: string]: {
@@ -11,7 +14,7 @@ interface Colors {
 
 const getStats = async () => {
   const octokit = new Octokit({
-    auth: import.meta.env.GH_TOKEN,
+    auth: process.env.GH_TOKEN,
   });
 
   const data = await octokit
@@ -89,7 +92,7 @@ const getStats = async () => {
   
 
   // save the data to a file
-  fs.writeFileSync("data.json", JSON.stringify(dataToSave, null, 2));
+  fs.writeFileSync("./src/components/helpers/data.json", JSON.stringify(dataToSave, null, 2));
 
   /* await octokit.request('GET /repos/{owner}/{repo}/languages', {
       owner: 'rcktsftwr',
