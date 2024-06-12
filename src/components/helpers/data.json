@@ -2,65 +2,59 @@
   "languages": [
     {
       "name": "JavaScript",
-      "value": 2228372,
-      "percentage": "57.69",
+      "value": 2214124,
+      "percentage": "85.42",
       "colour": "#f1e05a"
     },
     {
-      "name": "HTML",
-      "value": 721266,
-      "percentage": "18.67",
-      "colour": "#e34c26"
-    },
-    {
-      "name": "MDX",
-      "value": 535330,
-      "percentage": "13.86",
-      "colour": "#fcb32c"
-    },
-    {
       "name": "TypeScript",
-      "value": 244191,
-      "percentage": "6.32",
+      "value": 244274,
+      "percentage": "9.42",
       "colour": "#3178c6"
     },
     {
       "name": "Astro",
-      "value": 57074,
-      "percentage": "1.48",
+      "value": 57119,
+      "percentage": "2.20",
       "colour": "#ff5a03"
     },
     {
       "name": "CSS",
-      "value": 28729,
-      "percentage": "0.74",
+      "value": 24202,
+      "percentage": "0.93",
       "colour": "#563d7c"
     },
     {
       "name": "Go",
       "value": 19889,
-      "percentage": "0.51",
+      "percentage": "0.77",
       "colour": "#00ADD8"
     },
     {
       "name": "Java",
       "value": 12429,
-      "percentage": "0.32",
+      "percentage": "0.48",
       "colour": "#b07219"
     },
     {
-      "name": "Dockerfile",
-      "value": 9897,
-      "percentage": "0.26",
-      "colour": "#384d54"
+      "name": "HTML",
+      "value": 10185,
+      "percentage": "0.39",
+      "colour": "#e34c26"
     },
     {
       "name": "Shell",
-      "value": 5321,
-      "percentage": "0.14",
+      "value": 5156,
+      "percentage": "0.20",
       "colour": "#89e051"
+    },
+    {
+      "name": "Dockerfile",
+      "value": 4693,
+      "percentage": "0.18",
+      "colour": "#384d54"
     }
   ],
-  "totalSize": 3862498,
-  "date": "2024-06-11T09:59:06.181Z"
+  "totalSize": 2592071,
+  "date": "2024-06-12T05:50:34.616Z"
 }

@@ -25,7 +25,8 @@ const getStats = async () => {
       },
     })
     .then((response) => {
-      return response.data;
+      // console.log(response.data[0])
+      return response.data.filter((item: any) => item.owner.login !== "logiccloudag")
     });
 
   let languagesData: { name: string, value: number, percentage?: string | undefined, colour?: string | null | undefined}[] = [];
