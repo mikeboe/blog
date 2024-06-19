@@ -48,8 +48,8 @@ jobs:
           docker tag blog ${{ env.REGISTRY }}/mikeboe/blog:${{ steps.release.outputs.date }}
           docker push ${{ env.REGISTRY }}/mikeboe/blog:${{ steps.release.outputs.date }}
 
-      - uses: actions-hub/kubectl@master
-        env:
-          KUBE_CONFIG: ${{ secrets.K8S1_KUBE_CONFIG }}
-        with:
-          args: set image deployment/blog blog=ghcr.io/mikeboe/blog:${{ steps.release.outputs.date }} -n blog
+      # - uses: actions-hub/kubectl@master
+      #   env:
+      #     KUBE_CONFIG: ${{ secrets.K8S1_KUBE_CONFIG }}
+      #   with:
+      #     args: set image deployment/blog blog=ghcr.io/mikeboe/blog:${{ steps.release.outputs.date }} -n blog
