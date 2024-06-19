@@ -13,7 +13,7 @@ const ImageGallery = () => {
           <div className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800 rotate-2">
             <img
               alt=""
-              loading="lazy"
+              
               width="3744"
               height="5616"
               decoding="async"
@@ -27,7 +27,7 @@ const ImageGallery = () => {
           <div className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800 -rotate-2">
             <img
               alt=""
-              loading="lazy"
+             
               width="3936"
               height="2624"
               decoding="async"
@@ -41,7 +41,7 @@ const ImageGallery = () => {
           <div className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800 rotate-2">
             <img
               alt=""
-              loading="lazy"
+              
               width="5760"
               height="3840"
               decoding="async"
@@ -55,7 +55,7 @@ const ImageGallery = () => {
           <div className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800 rotate-2">
             <img
               alt=""
-              loading="lazy"
+             
               width="2400"
               height="3000"
               decoding="async"
@@ -69,7 +69,6 @@ const ImageGallery = () => {
           <div className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800 -rotate-2">
             <img
               alt=""
-              loading="lazy"
               width="4240"
               height="2384"
               decoding="async"
