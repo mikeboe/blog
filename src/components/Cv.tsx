@@ -44,7 +44,7 @@ const Cv = () => {
         start: '2015',
         end: '2017',
       },
-      logo: '/_next/static/media/planetaria.ecd81ade.svg',
+      logo: 'https://media.licdn.com/dms/image/C4D0BAQEDDr4dLuJjYw/company-logo_100_100/0/1651005531999/stockholm_university_logo?e=1726704000&v=beta&t=R9lYesFp2JHyvaLcJ33TOC8oroCgkgIHLfY-YzXwtsc',
     }
   ]
 

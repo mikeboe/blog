@@ -2,7 +2,7 @@
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.tsx";
 import Intro from "@/components/Intro.tsx";
-import ImageGallery from "@/components/ImageGalery.astro";
+import ImageGallery from "@/components/ImageGalery.tsx";
 import PostList from "@/components/PostList.tsx";
 import Cv from "@/components/Cv.tsx";
 import { getCollection } from "astro:content";
@@ -44,7 +44,7 @@ publishedBlogEntries.sort(function (a, b) {
       body={intro.body}
       social={intro.social}
     />
-  <!-- <ImageGallery /> -->
+  <ImageGallery />
   <div class="sm:px-8 mt-24 md:mt-28">
       <div class="mx-auto w-full max-w-7xl lg:px-8">
         <div class="relative px-4 sm:px-8 lg:px-12">
