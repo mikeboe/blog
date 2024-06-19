@@ -1,28 +1,18 @@
-import reactImage from "../assets/stack/react.png";
-import postgresImage from "../assets/stack/postgres.png";
-import nodejsImage from "../assets/stack/node-js.png";
-import jsTsImage from "../assets/stack/js-ts.webp";
-import tailwindImage from "../assets/stack/tailwind-css.png";
-import viteImage from "../assets/stack/vite.jpeg";
-import clickhouseImage from "../assets/stack/clickhouse.svg";
-import expressImage from "../assets/stack/express.jpeg";
-import githubActionsImage from "../assets/stack/gh-actions.png";
-
 const Stack = () => {
   const stack = [
-    { name: "React", icon: reactImage.src },
-    { name: "Vite", icon: viteImage.src },
-    { name: "Tailwind CSS", icon: tailwindImage.src },
+    { name: "React", icon: 'https://uploads.rocketcrm.io/blog/stack/react.png' },
+    { name: "Vite", icon: 'https://uploads.rocketcrm.io/blog/stack/vite.jpeg' },
+    { name: "Tailwind CSS", icon: 'https://uploads.rocketcrm.io/blog/stack/tailwind-css.png' },
     
-    { name: "Node.js", icon: nodejsImage.src },
-    { name: "JS / TS", icon: jsTsImage.src },
-    { name: "Express", icon: expressImage.src },
+    { name: "Node.js", icon: 'https://uploads.rocketcrm.io/blog/stack/node-js.png' },
+    { name: "JS / TS", icon: 'https://uploads.rocketcrm.io/blog/stack/js-ts.webp' },
+    { name: "Express", icon: 'https://uploads.rocketcrm.io/blog/stack/express.jpeg' },
     
-    { name: "Postgres", icon: postgresImage.src },
-    { name: "Clickhouse", icon: clickhouseImage.src },
+    { name: "Postgres", icon: 'https://uploads.rocketcrm.io/blog/stack/postgres.png' },
+    { name: "Clickhouse", icon: 'https://uploads.rocketcrm.io/blog/stack/clickhouse.svg' },
     { name: "Docker", icon: "https://simpleicons.org/icons/docker.svg"},
     { name: "Kubernetes", icon: "https://simpleicons.org/icons/kubernetes.svg"},
-    { name: "Github Actions", icon: githubActionsImage.src },
+    { name: "Github Actions", icon: 'https://uploads.rocketcrm.io/blog/stack/gh-actions.png' },
 
   ];
   return (

@@ -1,11 +1,4 @@
 
-
-import rhs from "../assets/gallery/rhs.png";
-import business1 from "../assets/gallery/business1.png";
-import business2 from "../assets/gallery/business2.png";
-import hike from "../assets/gallery/hike.png";
-import film from "../assets/gallery/film.png";
-
 const ImageGallery = () => {
    return (
     <div className="mt-16 sm:mt-20">
@@ -20,7 +13,7 @@ const ImageGallery = () => {
               data-nimg="1"
               className="absolute inset-0 h-full w-full object-cover"
               sizes="(min-width: 640px) 18rem, 11rem"
-              src={business1.src}
+              src='https://uploads.rocketcrm.io/blog/gallery/business1.png'
               style={{ color: "transparent" }}
             />
           </div>
@@ -34,7 +27,7 @@ const ImageGallery = () => {
               data-nimg="1"
               className="absolute inset-0 h-full w-full object-cover"
               sizes="(min-width: 640px) 18rem, 11rem"
-              src={rhs.src}
+              src="https://uploads.rocketcrm.io/blog/gallery/rhs.png"
               style={{ color: "transparent" }}
             />
           </div>
@@ -48,7 +41,7 @@ const ImageGallery = () => {
               data-nimg="1"
               className="absolute inset-0 h-full w-full object-cover"
               sizes="(min-width: 640px) 18rem, 11rem"
-              src={business2.src}
+              src="https://uploads.rocketcrm.io/blog/gallery/business2.png"
               style={{ color: "transparent" }}
             />
           </div>
@@ -62,7 +55,7 @@ const ImageGallery = () => {
               data-nimg="1"
               className="absolute inset-0 h-full w-full object-cover"
               sizes="(min-width: 640px) 18rem, 11rem"
-              src={film.src}
+              src="https://uploads.rocketcrm.io/blog/gallery/film.png"
               style={{ color: "transparent" }}
             />
           </div>
@@ -75,7 +68,7 @@ const ImageGallery = () => {
               data-nimg="1"
               className="absolute inset-0 h-full w-full object-cover"
               sizes="(min-width: 640px) 18rem, 11rem"
-              src={hike.src}
+              src="https://uploads.rocketcrm.io/blog/gallery/hike.png"
               style={{ color: "transparent" }}
             />
           </div>
